@@ -45,7 +45,7 @@
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">Shop </a>
             <ul class="dropdown-menu">
               <li><a href="ATNshop1.php">ATN Shop 1</a></li>
-              <li><a href="ATNshop2">ATN Shop 2</a></li>
+              <li><a href="ATNshop2.php">ATN Shop 2</a></li>
             </ul>
           </li>
         </ul>
