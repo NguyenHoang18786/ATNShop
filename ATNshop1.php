@@ -38,7 +38,7 @@
         <ul class="nav navbar-nav">
           <li><a href="index.php">Home</a></li>
           <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Products </a>
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Shop </a>
             <ul class="dropdown-menu">
               <li><a href="#">ATN Shop 1</a></li>
               <li><a href="ATNshop2.php">ATN Shop 2</a></li>
