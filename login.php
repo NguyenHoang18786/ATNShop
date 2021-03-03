@@ -49,9 +49,9 @@ session_start();
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" class="form-control" id="password" placeholder="Enter your password ..." name="password">
+          <input type="text" class="form-control" id="password" placeholder="Enter your password ..." name="password">
         </div>    
-          <input type="submit" name="submit" class="btn btn-primary" value="Login">
+          <input type="text" name="submit" class="btn btn-primary" value="Login">
           <?php
               $host_heroku = "ec2-34-203-255-149.compute-1.amazonaws.com";
               $db_heroku = "d4o7gh1clss23f";
