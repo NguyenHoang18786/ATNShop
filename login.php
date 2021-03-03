@@ -62,13 +62,13 @@ session_start();
             if(isset($_POST['submit'])){
               $username = $_POST["username"];
               $username = $_POST["username"];
-              if($username == "admin" && $password == "admin")
+              if($username == 'admim' && $password == 'admin')
               {
                 header('location: storage.php');
               }
-              elseif($username == "staff" && $password == "staff")
+              elseif($username == 'staff' && $password == 'staff')
               {
-                header('location: StorageManagement');
+                header('location: StorageManagement.php');
               }
                 /*$username = $_POST["username"];
                 $password = $_POST["password"];
