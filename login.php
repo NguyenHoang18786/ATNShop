@@ -77,6 +77,7 @@ session_start();
                           header('location: StorageManagement.php');
                       }
                 }
+            }
             ?>
      </form>
     </div>                         
