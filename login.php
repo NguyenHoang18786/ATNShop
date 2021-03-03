@@ -60,7 +60,17 @@ session_start();
               $conn_string = "host=$host_heroku port=5432 dbname=$db_heroku user=$user_heroku password=$pw_heroku";
               $pg_heroku = pg_connect($conn_string);
             if(isset($_POST['submit'])){
-                $username = $_POST["username"];
+              $username = $_POST["username"];
+              $username = $_POST["username"];
+              if($username == "admin" && $password == "admin" && $role == "admin")
+              {
+                header('location: storage.php')
+              }
+              elseif($username == "staff" && $password == "staff" && $role == "staff")
+              {
+                header('location: StorageManagement')
+              }
+                /*$username = $_POST["username"];
                 $password = $_POST["password"];
                 $query ="select * from accounts where username = '$username' and password = '$password' ";
                 $result = pg_query($pg_heroku,$query); 
@@ -79,7 +89,7 @@ session_start();
                       elseif($role_check == 'staff'){
                           header('location: StorageManagement.php');
                       }
-                }
+                }*/
             }
             ?>
      </form>
