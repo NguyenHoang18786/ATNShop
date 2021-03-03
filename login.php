@@ -62,24 +62,14 @@ session_start();
             if(isset($_POST['submit'])){
                 $username = $_POST["username"];
                 $password = $_POST["password"];
-                $query1 ="select username, password from accounts where username = '$username' and password = '$password' ";
-                $result1 = pg_query($pg_heroku,$query1); 
-                $login_check = pg_num_rows($result1);
-                $query2 ="select role from accounts where username = '$username' and password = '$password' ";
-                $result2 = pg_query($pg_heroku,$query2); 
-                $role_check = pg_fetch_assoc($result2);
-                if($login_check > 0 && $role_check == 'admin')
-                {        
-                          header('location: storage.php');
-                }
-                elseif($login_check > 0 && $role_check == 'staff')
-                {
-                          header('location: StorageManagement.php');
-                }
-                else
-                {        
+                $query ="select * from accounts where username = '$username' and password = '$password' ";
+                $result = pg_query($pg_heroku,$query); 
+                $login_check = pg_num_rows($result);
+                if($login_check == 0){        
                     echo "Invalid Details!!";   
-                } 
+                }else{        
+                    header('location: storage.php'); 
+                }
             }
             ?>
      </form>
