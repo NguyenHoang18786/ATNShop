@@ -74,7 +74,7 @@ session_start();
                     if($role_check = 'admin'){
                         header('location: storage.php');}
                     else{
-                        header('location: StorageManagement');}
+                        header('location: StorageManagement.php');}
                 }
           }
             ?>
