@@ -62,19 +62,7 @@ session_start();
             if(isset($_POST['submit'])){
               $username = $_POST["username"];
               $password = $_POST["password"];
-              if($username == 'admin' && $password == 'admin')
-              {
-                header('location: storage.php');
-              }
-              elseif($username == 'staff' && $password == 'staff')
-              {
-                header('location: StorageManagement.php');
-              }
-              else
-              {
-                echo "Invalid Details!!";
-              }
-                /*$username = $_POST["username"];
+                $username = $_POST["username"];
                 $password = $_POST["password"];
                 $query ="select * from accounts where username = '$username' and password = '$password' ";
                 $result = pg_query($pg_heroku,$query); 
@@ -85,15 +73,14 @@ session_start();
                 if($login_check == 0){        
                     echo "Invalid Details!!";   
                 }
-                else
-                {   
-                      if($role_check == 'admin'){
+                elseif($role_check == 'admin')
+                {        
                           header('location: storage.php');
-                      }
-                      elseif($role_check == 'staff'){
+                }
+                else($role_check == 'staff')
+                {
                           header('location: StorageManagement.php');
-                      }
-                }*/
+                }
             }
             ?>
      </form>
