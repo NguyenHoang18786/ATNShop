@@ -65,10 +65,16 @@ session_start();
                 $query ="select * from accounts where username = '$username' and password = '$password' ";
                 $result = pg_query($pg_heroku,$query); 
                 $login_check = pg_num_rows($result);
+                $queryrolecheck = "select role from accounts where username = '$username' and password = '$password' ";  
+                $result2 = pg_query($pg_heroku,$queryrolecheck);
+                $role_check = pg_fetch_assoc($result2);
                 if($login_check == 0){        
                     echo "Invalid Details!!";   
-                }else{        
-                    header('location: storage.php'); 
+                }else{   
+                    if($role_check = 'admin'){
+                        header('location: storage.php');}
+                    else{
+                        header('location: StorageManagement');}
                 }
           }
             ?>
