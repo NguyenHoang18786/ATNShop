@@ -70,11 +70,13 @@ session_start();
                 $role_check = pg_fetch_assoc($result2);
                 if($login_check == 0){        
                     echo "Invalid Details!!";   
-                }else{   
+                }
+                else
+                {   
                       if($role_check = 'admin'){
                           header('location: storage.php');
                       }
-                      else{
+                      elseif($role_check = 'staff'){
                           header('location: StorageManagement.php');
                       }
                 }
