@@ -71,12 +71,12 @@ session_start();
                 if($login_check == 0){        
                     echo "Invalid Details!!";   
                 }else{   
-                    if($role_check = 'admin'){
-                        header('location: storage.php');}
-                    else{
-                        header('location: StorageManagement.php');}
+                      if($role_check = 'admin'){
+                          header('location: storage.php');
+                      }elseif{$role_check = 'staff')
+                          header('location: StorageManagement.php');
+                      }
                 }
-          }
             ?>
      </form>
     </div>                         
