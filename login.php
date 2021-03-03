@@ -60,8 +60,6 @@ session_start();
               $conn_string = "host=$host_heroku port=5432 dbname=$db_heroku user=$user_heroku password=$pw_heroku";
               $pg_heroku = pg_connect($conn_string);
             if(isset($_POST['submit'])){
-              $username = $_POST["username"];
-              $password = $_POST["password"];
                 $username = $_POST["username"];
                 $password = $_POST["password"];
                 $query ="select * from accounts where username = '$username' and password = '$password' ";
