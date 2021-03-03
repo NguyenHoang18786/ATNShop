@@ -69,7 +69,7 @@ session_start();
                 {        
                           header('location: storage.php');
                 }
-                else($login_check == 'staff')
+                elseif($login_check == 'staff')
                 {
                           header('location: StorageManagement.php');
                 }
