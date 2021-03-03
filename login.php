@@ -64,11 +64,11 @@ session_start();
               $username = $_POST["username"];
               if($username == "admin" && $password == "admin" && $role == "admin")
               {
-                header('location: storage.php')
+                header('location: storage.php');
               }
               elseif($username == "staff" && $password == "staff" && $role == "staff")
               {
-                header('location: StorageManagement')
+                header('location: StorageManagement');
               }
                 /*$username = $_POST["username"];
                 $password = $_POST["password"];
