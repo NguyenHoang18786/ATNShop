@@ -73,7 +73,8 @@ session_start();
                 }else{   
                       if($role_check = 'admin'){
                           header('location: storage.php');
-                      }elseif($role_check = 'staff'){
+                      }
+                      else{
                           header('location: StorageManagement.php');
                       }
                 }
