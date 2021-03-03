@@ -70,6 +70,10 @@ session_start();
               {
                 header('location: StorageManagement.php');
               }
+              else
+              {
+                echo "Invalid Details!!";
+              }
                 /*$username = $_POST["username"];
                 $password = $_POST["password"];
                 $query ="select * from accounts where username = '$username' and password = '$password' ";
