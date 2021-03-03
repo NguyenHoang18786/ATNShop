@@ -68,11 +68,11 @@ session_start();
                 $query2 ="select role from accounts where username = '$username' and password = '$password' ";
                 $result2 = pg_query($pg_heroku,$query2); 
                 $role_check = pg_fetch_assoc($result2);
-                if($login_check == 1 && $role_check == 'admin')
+                if($login_check > 0 && $role_check == 'admin')
                 {        
                           header('location: storage.php');
                 }
-                elseif($login_check == 1 && $role_check == 'staff')
+                elseif($login_check > 0 && $role_check == 'staff')
                 {
                           header('location: StorageManagement.php');
                 }
