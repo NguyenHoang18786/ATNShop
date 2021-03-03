@@ -61,7 +61,7 @@ session_start();
               $pg_heroku = pg_connect($conn_string);
             if(isset($_POST['submit'])){
               $username = $_POST["username"];
-              $username = $_POST["username"];
+              $password = $_POST["username"];
               if($username == 'admim' && $password == 'admin')
               {
                 header('location: storage.php');
